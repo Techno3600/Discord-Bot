@@ -13,6 +13,14 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <repositories>
+  	<repository>
+  	  <id>jcenter</id>
+  	  <name>jcenter-bintray</name>
+  	  <url>http://jcenter.bintray.com</url>
+  	</repository>
+  </repositories>
 
   <dependencies>
     <dependency>
@@ -22,9 +30,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-    <groupId>net.dv8tion</groupId>
-    <artifactId>JDA</artifactId>
-    <version>3.8.1_439</version>
-</dependency>
+      <groupId>net.dv8tion</groupId>
+      <artifactId>JDA</artifactId>
+      <version>3.8.1_439</version>
+    </dependency>
   </dependencies>
 </project>
