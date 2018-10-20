@@ -1,3 +1,5 @@
+package com.gamingstuf.bot;
+
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Message;
@@ -7,6 +9,7 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 public class GS_CSay extends ListenerAdapter {
+	
 	public void onMessageReceived(MessageReceivedEvent e) {
 		MessageChannel channel = e.getChannel();
 		Message message = e.getMessage();

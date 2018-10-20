@@ -1,3 +1,5 @@
+package com.gamingstuf.bot;
+
 import java.awt.Color;
 
 import net.dv8tion.jda.core.EmbedBuilder;
