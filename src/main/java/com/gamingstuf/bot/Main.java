@@ -1,18 +1,18 @@
+package com.gamingstuf.bot;
+
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.Game;
-import net.dv8tion.jda.core.entities.Game.GameType;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
 		try {
-			JDA api = new JDABuilder(AccountType.BOT).setToken("NDk3MDQ3NjQ0OTcxOTkxMDYw.DqdWhQ.OWrXDYX39QvKQ5UDnpo9ZIJJh58").build();
+			JDA api = new JDABuilder(AccountType.BOT).setToken("NDk3MDQ3NjQ0OTcxOTkxMDYw.Dsj5jQ.V-d-L1RIGQert87w57WeHNOtGYY").build();
 			api.addEventListener(new GS_Author());
 			api.addEventListener(new GS_Debug());
 			api.addEventListener(new GS_Say());
 			api.addEventListener(new GS_Announce());
-			api.addEventListener(new GS_WizPerms());
 			api.addEventListener(new GS_Lock());
 			api.addEventListener(new GS_Archive());
 			//api.addEventListener(new GS_CSay());
