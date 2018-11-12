@@ -46,7 +46,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.gamingstuf.bot</mainClass>
+              <mainClass>com.gamingstuf.bot.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
