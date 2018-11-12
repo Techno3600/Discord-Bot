@@ -8,7 +8,7 @@ import net.dv8tion.jda.core.entities.Game;
 public class Main {
 	public static void main(String[] args) throws Exception {
 		try {
-			JDA api = new JDABuilder(AccountType.BOT).setToken("").build();
+			JDA api = new JDABuilder(AccountType.BOT).setToken("NDk3MDQ3NjQ0OTcxOTkxMDYw.Dst4Ug.AD1j00lJxOh5SmlnEbrp4k8Nbus").build();
 			api.addEventListener(new GS_Author());
 			api.addEventListener(new GS_Debug());
 			api.addEventListener(new GS_Say());
