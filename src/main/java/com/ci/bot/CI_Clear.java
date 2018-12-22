@@ -1,4 +1,4 @@
-package com.ci.bot;
+/*package com.ci.bot;
 
 import java.util.Arrays;
 import java.util.List;
@@ -46,4 +46,4 @@ public class CI_Clear extends AdminCommand {
 		
 	}
 
-}
+}*/

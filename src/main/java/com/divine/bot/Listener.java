@@ -18,42 +18,36 @@ public class Listener extends AdminCommand {
 	public List<String> getAliases() { return Arrays.asList("!promote"); }
 
 	@Override
-	public String getDescription() { return "Promote Command"; }
-
-	@Override
 	public String getName() { return "Promote Command"; }
 	
 	@Override
 	public Permission getPerm() { return Permission.MANAGE_SERVER; }
 
 	@Override
-	public List<String> getUsageInstructions() { return Arrays.asList("!promote <String track> <@user> - Promote User"); }
-
-	@Override
 	public void onCommand(MessageReceivedEvent e, String[] args) {
-		Guild g = e.getGuild();
-		String m1 = args[2].replaceAll("<", "");
-		m1 = m1.replaceAll("!", "");
-		m1 = m1.replaceAll(">", "");
-		m1 = m1.replaceAll("@", "");
-		m1 = m1.trim();
-		Long l = Long.parseLong(m1);
-		Member m = g.getMemberById(l);
 		if (args.length == 3)
+			
 		{
+			Guild g = e.getGuild();
+			String m1 = args[2].replaceAll("<", "");
+			m1 = m1.replaceAll("!", "");
+			m1 = m1.replaceAll(">", "");
+			m1 = m1.replaceAll("@", "");
+			m1 = m1.trim();
+			Long l = Long.parseLong(m1);
+			Member m = g.getMemberById(l);
 			try {
 				if (args[1].equalsIgnoreCase("staff")) { r = getRole(g, m, args[1]); }
 				else if (args[1].equalsIgnoreCase("media")) { r = getRole(g, m, args[1]); }
-				else { e.getChannel().sendMessage("Incorrect Usage. !promote <track> <@user> \\n Track: media, staff.").queue();
-				}
+				else { e.getChannel().sendMessage("Incorrect Usage. !promote <track> <@user> \\n Track: media, staff.").queue(); }
 			} catch (IllegalArgumentException q) { e.getChannel().sendMessage("Incorrect Usage. !promote <track> <@user> \\n Track: media, staff.").queue(); }
 			
 			if (r.isEmpty()) { e.getChannel().sendMessage("Promotion Error - That role is already the highest role in that tack.").queue(); }
 			
-			g.getController().addRolesToMember(m, r).complete();
+			g.getController().addRolesToMember(m, r).reason("Promotion Command. Initiated by " + e.getAuthor().getName()).complete();
 			if (r.size() == 3)
 			{
-				g.getController().removeSingleRoleFromMember(m, r.get(2)).complete();
+				g.getController().removeSingleRoleFromMember(m, r.get(2)).reason("Promotion Command. Initiated by " + e.getAuthor().getName()).complete();
 			}
 			e.getChannel().sendMessage(getMsg(m, r.get(0).getColorRaw(), e.getMember()).build()).queue();
 		} else

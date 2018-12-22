@@ -36,15 +36,9 @@ public class Mentionable extends AdminCommand {
 	public List<String> getAliases() { return Arrays.asList("-m", "-mentionable"); }
 
 	@Override
-	public String getDescription() { return "Makes roles mentionable"; }
-
-	@Override
 	public String getName() { return "Mention Toggle Command"; }
 	
 	public Permission getPerm() {return Permission.MANAGE_SERVER; }
-
-	@Override
-	public List<String> getUsageInstructions() { return Arrays.asList("-m <true/false> - Make roles mentionable"); }
 
 
 

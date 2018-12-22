@@ -15,16 +15,10 @@ public class Status extends AdminCommand {
 	public List<String> getAliases() { return Arrays.asList("-s", "-status"); }
 
 	@Override
-	public String getDescription() { return "Set bot's status"; }
-
-	@Override
 	public String getName() { return "Status Command"; }
 	
 	@Override
-	public Permission getPerm() {return Permission.MANAGE_SERVER; }
-
-	@Override
-	public List<String> getUsageInstructions() { return Arrays.asList(""); }
+	public Permission getPerm() { return Permission.MANAGE_SERVER; }
 
 	@Override
 	public void onCommand(MessageReceivedEvent e, String[] args)

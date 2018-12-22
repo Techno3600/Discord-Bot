@@ -14,15 +14,9 @@ public class Lockdown extends AdminCommand {
 	public List<String> getAliases() { return Arrays.asList("-lockdown", "-ld"); }
 
 	@Override
-	public String getDescription() { return "Lockdown Server"; }
-
-	@Override
 	public String getName() { return "Lockdown Command"; }
 	
 	public Permission getPerm() {return Permission.MESSAGE_MANAGE; }
-
-	@Override
-	public List<String> getUsageInstructions() { return Arrays.asList("-lockdown <lock/unlock> - Lockdown server"); }
 
 	@Override
 	public void onCommand(MessageReceivedEvent e, String[] args)
@@ -38,11 +32,6 @@ public class Lockdown extends AdminCommand {
 		{
 			e.getGuild().getRoleById(461206102982393876L).getManager().givePermissions(roles).complete();
 			e.getChannel().sendMessage("Discord Lockdown has Ended.").queue();
-		} else
-		{
-			e.getChannel().sendMessage("Error - -lockdown <lock/unlock>").complete();
-		}
-		
+		} else { e.getChannel().sendMessage("Error - -lockdown <lock/unlock>").complete(); }
 	}
-
 }

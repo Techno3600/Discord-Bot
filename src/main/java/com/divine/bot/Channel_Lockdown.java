@@ -1,4 +1,4 @@
-package com.divine.bot;
+/*package com.divine.bot;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,13 +14,7 @@ public class Channel_Lockdown extends AdminCommand {
 	public List<String> getAliases() { return Arrays.asList("!channel"); }
 
 	@Override
-	public String getDescription() { return "Channel Lockdown"; }
-
-	@Override
 	public String getName() { return "Channel Lockdown Command"; }
-
-	@Override
-	public List<String> getUsageInstructions() { return Arrays.asList("!channel <lock/unlock> - Lock chat."); }
 	
 	@Override
 	public Permission getPerm() {return Permission.MESSAGE_MANAGE; }
@@ -38,4 +32,4 @@ public class Channel_Lockdown extends AdminCommand {
 		}
 	}
 
-}
+}*/
