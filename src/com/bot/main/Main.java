@@ -94,7 +94,7 @@ public class Main {
             GameInsights.addEventListener(new Shutdown());
             Runtime.getRuntime().exec("java -jar verify.jar");
             System.out.println("Loaded Game Insights + Auxillary Jar File");*/
-			JDA mcd = new JDABuilder(AccountType.BOT).setToken("NTM1ODg0Njg2MzIxNTE2NTQ0.DyOpIA.YGu2WeB-7NyRCA8dLm3kK3mGIiU").build();
+			JDA mcd = new JDABuilder(AccountType.BOT).setToken("").build();
 			mcd.addEventListener(new Spam());
 			mcd.addEventListener(new Say());
 			mcd.addEventListener(new GS_Debug());
