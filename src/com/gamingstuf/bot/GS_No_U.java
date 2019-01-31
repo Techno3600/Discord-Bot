@@ -3,7 +3,7 @@ package com.gamingstuf.bot;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class No_U extends ListenerAdapter
+public class GS_No_U extends ListenerAdapter
 {
 	public void onMessageReceived(MessageReceivedEvent e)
 	{

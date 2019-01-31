@@ -1,4 +1,4 @@
-package com.gamingstuf.bot;
+package com.bot.main;
 
 import java.awt.Color;
 
@@ -8,7 +8,7 @@ import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class GS_Author extends ListenerAdapter {
+public class Author extends ListenerAdapter {
 	public void onMessageReceived(MessageReceivedEvent e) {
 		MessageChannel channel = e.getChannel();
 		Message message = e.getMessage();

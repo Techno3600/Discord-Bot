@@ -40,6 +40,5 @@ public class F {
 		f.setDescription(commandDescription);
 		f.addField("Problem", problem, true);
 		return f;
-		
 	}
 }

@@ -3,6 +3,8 @@ package com.bot.main;
 import java.util.Arrays;
 import java.util.List;
 
+import com.bot.functions.F;
+
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
@@ -49,7 +51,7 @@ public class Status extends AdminCommand {
 			e.getChannel().sendMessage("Set bot's game status to: PLAYING " + "'" + message + "'.").queue();
 		} else
 		{
-			e.getChannel().sendMessage("Incorrect Usage. -status <Game GAME> <String status> \n List of possible games: WATCHING, LISTENING, PLAYING.").queue();
+			e.getChannel().sendMessage(F.error("Bot Status Command", "-status <Game GAME> <String status>. List of possible games: WATCHING, LISTENING, PLAYING", "The first argument must be `WATCHING`, `LISTENING`, or `PLAYING`").build()).queue();
 		}
 	}
 }

@@ -11,7 +11,7 @@ import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
-public class Archive extends AdminCommand {
+public class MF_Archive extends AdminCommand {
 	@Override
 	public void onCommand(MessageReceivedEvent e, String[] args) {
 		if (args.length == 2)

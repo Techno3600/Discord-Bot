@@ -3,7 +3,7 @@ package com.bot.main;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class GS_Debug extends ListenerAdapter {
+public class Debug extends ListenerAdapter {
 	public void onMessageReceived(MessageReceivedEvent e) {
 		if (e.getMessage().getContentRaw().startsWith("-debug")) {
 			if (e.getAuthor().getIdLong() == 323864143423864833L)

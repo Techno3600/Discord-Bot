@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;
 
+import com.bot.functions.F;
+
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Member;
@@ -38,7 +40,7 @@ public class Slowmode extends AdminCommand {
 		{
 			try {
 				i = Integer.parseInt(args[1]);
-			} catch (Exception e1) { e.getChannel().sendMessage("Invalid argument. Must be an integer.").queue(); }
+			} catch (Exception e1) { e.getChannel().sendMessage(F.error("Slowmode Command", "-slowdown(-sm, -sd, -slowdown) <int>", "You must enter an integer or leave the first argument blank").build()).queue(); }
 			if (!(i == 0))
 			{
 				e.getTextChannel().getManager().setSlowmode(i).complete();
@@ -49,7 +51,7 @@ public class Slowmode extends AdminCommand {
 				e.getChannel().sendMessage(message(e.getMember(), e.getTextChannel(), 0, false).build()).queue();
 			}
 			
-		} else { e.getChannel().sendMessage("Incorrect Usage. `-slowdown(-sm, -sd, -slowdown) <int>`").queue(); }
+		} else { e.getChannel().sendMessage(F.error("Slowmode Command", "-slowdown(-sm, -sd, -slowdown) <int>", "You must enter an integer or leave the first argument blank").build()).queue(); }
 	}
 	
 	

@@ -5,7 +5,7 @@ import net.dv8tion.jda.core.events.message.guild.react.GuildMessageReactionAddEv
 import net.dv8tion.jda.core.events.message.guild.react.GuildMessageReactionRemoveEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class RoleNotif extends ListenerAdapter {
+public class GS_RoleNotif extends ListenerAdapter {
 	public void onGuildMessageReactionAdd(GuildMessageReactionAddEvent e)
 	{
 	Role discord = e.getGuild().getRoleById(513907234816917506L);

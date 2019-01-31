@@ -7,7 +7,7 @@ import net.dv8tion.jda.core.events.message.guild.react.GuildMessageReactionAddEv
 import net.dv8tion.jda.core.events.message.guild.react.GuildMessageReactionRemoveEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-public class F_Assign extends ListenerAdapter {
+public class Fan_NotifRoles extends ListenerAdapter {
 	public Role getRole(Long l, Guild g)
 	{
 		return g.getRoleById(l);

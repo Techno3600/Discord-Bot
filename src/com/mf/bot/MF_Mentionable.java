@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.bot.functions.F;
 import com.bot.main.AdminCommand;
 
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.entities.Role;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
-public class Mentionable extends AdminCommand {
+public class MF_Mentionable extends AdminCommand {
 	@Override
 	public void onCommand(MessageReceivedEvent e, String[] args) {
 		List<Role> roles = new ArrayList<>();
@@ -39,7 +40,7 @@ public class Mentionable extends AdminCommand {
 			}
 		} else
 		{
-			e.getChannel().sendMessage("Wrong Usage. `-m(entionable) true/false`").queue();
+			e.getChannel().sendMessage(F.error("Mentionable Roles Toggle Command", "-m <true/false>", "You must enter either `true` or `false` as the first argument.").build()).queue();
 		}
 	}
 	

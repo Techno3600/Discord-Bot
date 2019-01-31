@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.bot.functions.F;
 import com.bot.main.AdminCommand;
 
 import net.dv8tion.jda.core.Permission;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
-public class Lockdown extends AdminCommand {
+public class CI_Lockdown extends AdminCommand {
 	@Override
 	public List<String> getAliases() { return Arrays.asList("-lockdown", "-ld"); }
 
@@ -32,6 +33,8 @@ public class Lockdown extends AdminCommand {
 		{
 			e.getGuild().getRoleById(461206102982393876L).getManager().givePermissions(roles).complete();
 			e.getChannel().sendMessage("Discord Lockdown has Ended.").queue();
-		} else { e.getChannel().sendMessage("Error - -lockdown <lock/unlock>").complete(); }
+		} else {
+			e.getChannel().sendMessage(F.error("Lockdown Command", "-lockdown(-ld) lock/unlock", "You must enter `lock`/`unlock` as the first argument.").build()).queue();
+		}
 	}
 }
